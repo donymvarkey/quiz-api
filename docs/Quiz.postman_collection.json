@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "ae8e30e9-970b-4fae-a04b-b15531247104",
+		"name": "Quiz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Quiz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODRiMTdhYTZlNWY0OWM0MGFjOGYxMCIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTI4NjY0MTN9.DfRsU-pjfQ8gKpiORHG-3SzB56Vz9bBqXwBaqOf5lXI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"MCU Trivia\",\n    \"description\": \"This is a MCQ on Marvel Cinematic Universe\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/quiz",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"quiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Questions to Quiz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODRiMTdhYTZlNWY0OWM0MGFjOGYxMCIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTI4NjY0MTN9.DfRsU-pjfQ8gKpiORHG-3SzB56Vz9bBqXwBaqOf5lXI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"question\": \"Who is known as God of Mischief?\",\n    \"options\": [\n        {\n            \"text\": \"Loki\",\n            \"isCorrect\": true\n        },\n        {\n            \"text\": \"thor\",\n            \"isCorrect\": false\n        },\n        {\n            \"text\": \"Hela\",\n            \"isCorrect\": false\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/quiz/6284bd7a7897ffa857068522",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"quiz",
+						"6284bd7a7897ffa857068522"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Stats of a quiz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODRiMTdhYTZlNWY0OWM0MGFjOGYxMCIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTI4NjY0MTN9.DfRsU-pjfQ8gKpiORHG-3SzB56Vz9bBqXwBaqOf5lXI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"score\": 8\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/stats/6285c5857089fe85ccf08fea",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"stats",
+						"6285c5857089fe85ccf08fea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Quizes added by a User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODRiMTdhYTZlNWY0OWM0MGFjOGYxMCIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTI4NjY0MTN9.DfRsU-pjfQ8gKpiORHG-3SzB56Vz9bBqXwBaqOf5lXI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"MCU Trivia\",\n    \"description\": \"This is a MCQ on Marvel Cinematic Universe\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/quiz/6284b17aa6e5f49c40ac8f10",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"quiz",
+						"6284b17aa6e5f49c40ac8f10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get question with an ID from a particular Quiz",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODRiMTdhYTZlNWY0OWM0MGFjOGYxMCIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTI4NjY0MTN9.DfRsU-pjfQ8gKpiORHG-3SzB56Vz9bBqXwBaqOf5lXI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/quiz/question/6285c5a37089fe85ccf08fed",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"quiz",
+						"question",
+						"6285c5a37089fe85ccf08fed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stats of all quizzes completed by a User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODRiMTdhYTZlNWY0OWM0MGFjOGYxMCIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTI4NjY0MTN9.DfRsU-pjfQ8gKpiORHG-3SzB56Vz9bBqXwBaqOf5lXI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"score\": 6\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/stats/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"stats",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stats of a particular quiz completed by a User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODRiMTdhYTZlNWY0OWM0MGFjOGYxMCIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTI4NjY0MTN9.DfRsU-pjfQ8gKpiORHG-3SzB56Vz9bBqXwBaqOf5lXI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"score\": 6\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/stats/quiz/6285c5857089fe85ccf08fea",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"stats",
+						"quiz",
+						"6285c5857089fe85ccf08fea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all Quizzes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODRiMTdhYTZlNWY0OWM0MGFjOGYxMCIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTI4NjY0MTN9.DfRsU-pjfQ8gKpiORHG-3SzB56Vz9bBqXwBaqOf5lXI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"MCU Trivia\",\n    \"description\": \"This is a MCQ on Marvel Cinematic Universe\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/quiz/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"quiz",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
